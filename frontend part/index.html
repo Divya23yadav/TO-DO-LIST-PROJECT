@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Japanese Task Management Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script>
+if (!localStorage.getItem("token")) {
+    window.location.href = "login.html";
+    
+}
+</script>
+</head>
+<body>
+
+<div class="container">
+ <div class="top-bar">
+        <h1 id="title">Japanese Task Management Portal</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+    
+<div class="top-controls">
+    <button id="themeToggle" class="theme-btn">Dark Mode</button>
+    <button id="langToggle" class="lang-btn">JP</button>
+    </div>
+
+    <!-- Input Section -->
+    <div class="input-section">
+        <input type="text" id="taskInput" placeholder="Write your task...">
+        <button id="addBtn">Add Task</button>
+    </div>
+
+    <!-- Counter Section -->
+    <div class="counter">
+        <span><span id="totalText">Total</span>: <strong id="totalCount">0</strong></span>
+        <span><span id="completedText">Completed</span>: <strong id="completedCount">0</strong></span>
+        <span><span id="remainingText">Remaining</span>: <strong id="remainingCount">0</strong></span>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filters">
+        <button class="filter-btn active" id="allBtn" data-filter="all">All</button>
+        <button class="filter-btn" id="completedBtn" data-filter="completed">Completed</button>
+        <button class="filter-btn" id="pendingBtn" data-filter="pending">Pending</button>
+    </div>
+
+    <!-- Task Table -->
+    <div class="table-section">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th id="taskHeader">Task</th>
+                    <th id="statusHeader">Status</th>
+                    <th id="actionHeader">Action</th>
+                </tr>
+            </thead>
+            <tbody id="taskTableBody">
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+function logout() {
+    localStorage.removeItem("token");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

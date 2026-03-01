@@ -1,0 +1,377 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY STYLING
+========================= */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* =====================================================
+   LOGIN & REGISTER PAGE STYLING
+===================================================== */
+
+body.auth-page {
+    background: linear-gradient(to right, #4e73df, #1cc88a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card */
+.login-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Inputs */
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.login-container input:focus {
+    border-color: #4e73df;
+    outline: none;
+}
+/* Complete (✔) button */
+.complete {
+    color: #2e7d32;        /* green */
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.complete:hover {
+    color: #00c853;
+    transform: scale(1.2);
+}
+
+/* Delete (✖) button */
+.delete {
+    color: #c62828;        /* red */
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete:hover {
+    color: #ff1744;
+    transform: scale(1.2);
+}
+
+/* Button */
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #4e73df;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    background: #2e59d9;
+}
+
+/* Link */
+.login-container a {
+    color: #4e73df;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
+}
+
+/* =====================================================
+   TODO PAGE STYLING 
+===================================================== */
+
+body.todo-page {
+    background: #7a9c39;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    min-height: 100vh;
+}
+
+/* Main Card */
+.container {
+    background: #6f8f2f;
+    width: 90%;
+    max-width: 900px;
+    padding: 40px;
+    border-radius: 16px;
+}
+
+/* Title */
+.container h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+/* Dark Mode Button */
+.dark-btn {
+    background: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+}
+
+.input-section button {
+    padding: 12px 25px;
+    background: #2d5d0b;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.input-section button:hover {
+    background: #244a09;
+}
+
+/* Counter Section */
+.counter {
+    display: flex;
+    justify-content: space-between;
+    background: #d9d9d9;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Filter Buttons */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-btn.active {
+    background: #2d5d0b;
+    color: white;
+}
+
+/* Table */
+table {
+    width: 100%;
+    background: #e6e6e6;
+    border-radius: 8px;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+table thead {
+    background: #cccccc;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: center;
+}
+
+/* =====================================================
+   DARK MODE FOR TODO
+===================================================== */
+
+body.dark {
+    background-color: #1e1e1e;
+}
+
+body.dark .container {
+    background-color: #2c2c2c;
+}
+
+body.dark h1 {
+    color: white;
+}
+
+body.dark .counter,
+body.dark .filter-btn,
+body.dark table {
+    background-color: #3a3a3a;
+    color: white;
+}
+
+body.dark table thead {
+    background-color: #444;
+}
+
+body.dark .filter-btn.active {
+    background: #00c853;
+}
+
+body.dark .input-section input {
+    background-color: #444;
+    color: white;
+}
+
+body.dark .input-section button {
+    background-color: #00c853;
+}
+/* ===============================
+   TOP CONTROL BUTTONS (Dark + JP)
+================================ */
+
+.top-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Dark Mode Button */
+.theme-btn {
+    background: #ffffff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background: #eeeeee;
+}
+
+/* Language Button */
+.lang-btn {
+    background: #ffffff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lang-btn:hover {
+    background: #eeeeee;
+}
+/* Dark mode buttons */
+body.dark .theme-btn,
+body.dark .lang-btn {
+    background: #3a3a3a;
+    color: white;
+}
+
+body.dark .theme-btn:hover,
+body.dark .lang-btn:hover {
+    background: #555;
+}
+/* ===============================
+   TOP BAR (Title + Logout)
+================================ */
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* Logout Button */
+.logout-btn {
+    background: #b71c1c;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #8e0000;
+}
+body.dark .logout-btn {
+    background: #ff5252;
+}
+
+body.dark .logout-btn:hover {
+    background: #ff1744;
+}
+/* due date */
+.priority.high {
+    color: red;
+    font-weight: bold;
+}
+
+.priority.medium {
+    color: orange;
+    font-weight: bold;
+}
+
+.priority.low {
+    color: green;
+    font-weight: bold;
+}
