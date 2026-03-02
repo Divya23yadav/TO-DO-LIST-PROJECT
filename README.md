@@ -38,6 +38,38 @@ This project demonstrates full-stack development skills using Node.js, Express, 
 - Git & GitHub
 - Nodemon
 
+## 🔗 REST API Routes
+
+### Authentication Routes
+
+| Method | Endpoint | Description |
+|--------|----------|------------|
+| POST | /api/auth/register | Register new user |
+| POST | /api/auth/login | Login user |
+
 ---
+
+### Task Routes (Protected)
+
+| Method | Endpoint | Description |
+|--------|----------|------------|
+| POST | /api/tasks | Create new task |
+| GET | /api/tasks | Get all user tasks |
+| PATCH | /api/tasks/:id | Update task (mark complete) |
+| DELETE | /api/tasks/:id | Delete task |
+
+
+
+##  How to Run the Project
+
+### 1️ Clone Repository
+git clone https://github.com/Divya23yadav/TO-DO-LIST-PROJECT.git
+### 2 backend part
+cd backend part
+npm install
+nodemon index.js
+http://localhost:5000
+### 3 frontend part
+frontend part/index.html
 
 
